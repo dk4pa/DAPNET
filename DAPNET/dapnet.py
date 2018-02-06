@@ -7,7 +7,7 @@ import json
 # Funktionen definieren
 ###############################################################################
 
-def send(text, callsign, login, passwd, url,txgroup="dl-he"): # mit json modul machen
+def send(text, callsign, login, passwd, url, txgroup): # mit json modul machen
 	""" Sendet JASON-String zur Funkruf senden."""
 
 	json_string =json.dumps({"text": text, "callSignNames": callsign, "transmitterGroupNames": [txgroup], "emergency": False})
